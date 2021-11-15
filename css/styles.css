@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #191919;
+    color: #ffffff;
+}
+
+label{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.bg-red{
+    background-color: darkred;
+}
+
+
+/* #############   BOX   ############# */
+
+.box{
+    margin: 25px 10px 25px 10px;
+    background-color: #131313;
+    border-radius: 4px;
+}
+
+.box-primary{
+    border-top: 3px solid darkred;
+}
+
+.box-header{
+    box-shadow: border-box;
+}
+
+.box-title{
+    font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin:10px;
+}
+
+.box-body{
+    display: block;
+    padding: 20px 10px 20px 10px;
+    font-family: Ubuntu;
+    font-size: 13px;
+    border-top: 1px solid #212121;
+    min-height: 100%;
+}
+
+.box-footer{
+    padding: 20px 10px 3px 10px;
+    border-radius: 0 0 3px 3px;
+    border-top: 1px solid #212121;
+    font-family: Ubuntu;
+    font-size: 13px;
+}
+
+/* #############   BOTÕES   ############# */
+
+/* #######   COMUNS   ####### */
+
+.btn{
+    font-family: Ubuntu;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #292929;
+    background-color: #262626;
+    color: azure;
+    box-shadow: none;
+}
+
+.btn:hover{
+    border: 1px solid #292929;
+    background-color: #383838;
+    color: azure;
+    transition: all .5s linear;
+}
+
+/* #######   PRIMARY   ####### */
+
+.btn-primary{
+    border: 1px solid #2e0000;
+    background-color: #5e0000;
+}
+
+.btn-primary:hover{
+    border: 1px solid #5e0000;
+    background-color: darkred;
+    transition: all .5s linear;
+}
+
+/* #######   DANGER   ####### */
+
+.btn-danger{
+    border: 1px solid #5e0000;
+    background-color: darkred;
+}
+
+.btn-danger:hover{
+    border: 1px solid #5e0000;
+    background-color: darkred;
+    transition: all .5s linear;
+}
+
+/* #### TABELA #### */
+
+.tabela {
+    width: 100%;
+    background-color: #141414;
+    border-collapse: collapse;
+    color: ghostwhite;
+}
+
+th {
+    background-color: #131313;
+    vertical-align: middle;
+    color: #ccc;
+}
+
+tr {
+    height: 40px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #ccc;
+}
+
+tr:nth-child(odd){
+    background-color: #191919;
+}
+
+tr:hover {
+    background-color: #5e0000;
+}
+
+td {
+    text-align: center;
+}
+
+td a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #fff;
+}
+
+a {
+    color: #3c8dbc;
+    text-decoration: none;
+}
