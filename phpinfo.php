@@ -1,6 +1,6 @@
 <?php
 
-#phpinfo();
+phpinfo();
 
 $conexao = new mysqli('127.0.0.1', 'fernando', '1234', 'treinaweb');
 

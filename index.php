@@ -1,8 +1,12 @@
-<?php require_once "templates/navbar.php"; ?>
-<?php require_once "src/classes/Item.php"; ?>
-<?php require "util/config.php"?>
+<?php 
+	require_once "src/classes/Item.php";
+	require_once "util/config.php";
+	require_once "queries/item_query.php";
+	include("util/verificar_login.php");
+?>
 
-<main class="container">
+<?php require_once "templates/navbar.php"; ?>
+	<main class="container">
 		<div class="box box-primary">
 		<div class="box-header">
 			<h5 class="box-title">Ítens emprestados</h5>
@@ -20,6 +24,7 @@
 				</thead>
 				<tbody>
                     <?php 
+						$itens = listar_itens($conexao);
 						$contador = 0;
                         foreach ($itens as $i)
 						{

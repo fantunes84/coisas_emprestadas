@@ -1,9 +1,19 @@
 <?php
 
-$conexao = new mysqli('127.0.0.1', 'fernando', '1234', 'itens_emprestados');
+$servername = "localhost";
+$username = 'fernando';
+$password = '1234';
+$dbname = 'itens_emprestados';
 
-$select = 'select * from item';
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$conexao = new mysqli($servername, $username, $password, $dbname);
 
-$resultado = $conexao->query($select);
+if ($conexao->connect_error){
+    die("Falha de conexão: " . $conexao->connect_error);
+}
 
-$itens = $resultado->fetch_all(MYSQLI_ASSOC);
+#$select = 'select * from item';
+
+#$resultado = $conexao->query($select);
+
+#$itens = $resultado->fetch_all(MYSQLI_ASSOC);

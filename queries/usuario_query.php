@@ -19,3 +19,11 @@ function cadastrar_usuario($conexao)
     $conexao->query($insert);
 }
 
+function listar_usuario_email($conexao, $email)
+{
+    $query = "select * from usuario where email='{$email}'";
+    #$query = "select * from usuario";
+    $resultado = $conexao->query($query);
+    $usuario = $resultado->fetch_assoc();
+    return $usuario;
+}

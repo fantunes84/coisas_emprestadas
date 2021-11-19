@@ -6,7 +6,7 @@ require_once "../queries/usuario_query.php";
 function verificar_senha()
 {
     if ($_POST['senha'] === $_POST['confirmacao_senha']) {
-        $_POST['senha'] = crypt($_POST['senha']);
+        $_POST['senha'] = md5($_POST['senha']);
 
     } else {
         echo "A senha não confere com a confirmação.";
