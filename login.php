@@ -3,12 +3,12 @@
     <head>
         <title>Login</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="static/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" href="img/favicon.png">
+        <link rel="icon" href="static/img/favicon.png">
     </head>
     <body>
         <header class="main-header">
@@ -16,7 +16,7 @@
 
 
         <main class="login">
-            <img class="logotipo" src="img/logo.png">
+            <img class="logotipo" src="static/img/logo.png">
             <div class="login-box">
                 
                 <div class="box box-primary">
@@ -24,7 +24,7 @@
                         <h3 class="box-title">Login</h3>
                     </div>
                     <div class="box-body">
-                        <form method="post" action="util/logar.php">
+                        <form method="post" action="src/validacoes/validar_login.php">
                             <div class="form-group">
                                 
                                 <label>E-mail: </label>

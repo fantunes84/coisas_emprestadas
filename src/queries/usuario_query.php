@@ -4,7 +4,7 @@
 
 function cadastrar_usuario($conexao)
 {
-    $insert = "insert into usuario (
+    $query = "insert into usuario (
                                     nome, 
                                     contato,
                                     email,
@@ -16,7 +16,7 @@ function cadastrar_usuario($conexao)
                                     '{$_POST['email']}',
                                     '{$_POST['senha']}'
                                 )";
-    $conexao->query($insert);
+    $conexao->query($query);
 }
 
 function listar_usuario_email($conexao, $email)

@@ -1,6 +1,6 @@
 <?php
 
-require_once "../util/config.php";
+require_once "../config.php";
 require_once "../queries/usuario_query.php";
 
 function verificar_senha()
@@ -16,7 +16,7 @@ function verificar_senha()
 verificar_senha();
 
 cadastrar_usuario($conexao);
-header("Location:../index.php");
+header("Location: ../../login.php");
 
 /*
 Caso você precise fazer uma verificação de senhas, por exemplo, 

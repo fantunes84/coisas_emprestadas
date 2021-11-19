@@ -1,7 +1,7 @@
 <?php
 
 // Conexão com o banco de dados
-require_once "../util/config.php";
+require_once "../config.php";
 require_once "../queries/usuario_query.php";
 
 // Inicia sessões
@@ -17,7 +17,7 @@ if((isset($_POST['email'])) && (isset($_POST['senha']))){
 			$_SESSION['usuarioId'] = $usuario['id'];
             $_SESSION['usuarioNome'] = $usuario['nome'];
             $_SESSION['usuarioEmail'] = $usuario['email'];
-			header("Location: ../index.php");
+			header("Location: ../../index.php");
 		} else {
 			$_SESSION['loginErro'] = "A senha digitada não confere.";
 			echo $_SESSION['loginErro'];

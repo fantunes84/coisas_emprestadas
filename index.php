@@ -1,8 +1,8 @@
 <?php 
 	require_once "src/classes/Item.php";
-	require_once "util/config.php";
-	require_once "queries/item_query.php";
-	include("util/verificar_login.php");
+	require_once "src/config.php";
+	require_once "src/queries/item_query.php";
+	include("src/validacoes/verificar_login.php");
 ?>
 
 <?php require_once "templates/navbar.php"; ?>

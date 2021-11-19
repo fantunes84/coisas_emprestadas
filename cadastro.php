@@ -6,7 +6,7 @@
             <h5 class="box-title">Cadastro de Usuários</h5>
         </div>
         <div class="box-body">
-            <form action="util/cadastrar.php" method="post">
+            <form action="src/validacoes/cadastrar_usuario.php" method="post">
                 <label for="nome"><h6>Nome Completo</h6></label>
                 <input type="text" class="form-control" name="nome" placeholder="Digite seu nome">
                 
