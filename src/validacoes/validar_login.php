@@ -8,12 +8,12 @@ require_once "../queries/usuario_query.php";
 session_start();
 
 $email = $_POST['email'];
-$senha = md5($_POST['senha']);
+$senha = ($_POST['senha']);
 
 if((isset($_POST['email'])) && (isset($_POST['senha']))){
 	$usuario = listar_usuario_email($conexao, $email);
 	if (isset($usuario)){
-		if ($senha == $usuario['senha']) {
+		if (crypt($senha, $usuario['senha']) === $usuario['senha']) {
 			$_SESSION['usuarioId'] = $usuario['id'];
             $_SESSION['usuarioNome'] = $usuario['nome'];
             $_SESSION['usuarioEmail'] = $usuario['email'];
