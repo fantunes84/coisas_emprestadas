@@ -1,7 +1,7 @@
 <?php 
-	require_once "src/classes/Item.php";
+	require_once "src/classes/Emprestimo.php";
 	require_once "src/config.php";
-	require_once "src/queries/item_query.php";
+	require_once "src/queries/emprestimo_query.php";
 	include("src/validacoes/verificar_login.php");
 ?>
 
@@ -15,32 +15,40 @@
 			<table class="tabela">
 				<thead>
 					<tr>
-						<th>Ítem</th>
-						<th>Data Empréstimo</th>
-						<th>Previsão Entrega</th>
-						<th>Data Entrega</th>
-						<th>Status</th>
+						<th class="text-center">Ítem</th>
+						<th class="text-center">Data Empréstimo</th>
+						<th class="text-center">Previsão Entrega</th>
+						<th class="text-center">Data Entrega</th>
+						<th class="text-center">Nome</th>
+						<th class="text-center">Contato</th>
+						<th class="text-center">Status</th>
+						<th class="text-center">Ações</th>
 					</tr>
 				</thead>
 				<tbody>
                     <?php 
-						$itens = listar_itens($conexao);
+						$emprestimos = listar_emprestimos_usuario($conexao, $_SESSION["usuario_id"]);
 						$contador = 0;
-                        foreach ($itens as $i)
+                        foreach ($emprestimos as $i)
 						{
-							$item = new Item(
-												$i["item"], 
-												$i["data_emprestimo"], 
-												$i["previsao_entrega"],
-												$i["data_entrega"]
-											);
+							$emprestimo = new Emprestimo(
+															$i["item"], 
+															$i["data_emprestimo"], 
+															$i["previsao_entrega"],
+															$i["data_entrega"],
+															$i["nome"],
+															$i["contato"],
+															$i["usuario_id"]
+														);
 							echo "
 									<tr>
-										<td>{$item->getItem()}</td>
-										<td>{$item->imprimirDataEmprestimo()}</td>
-										<td>{$item->imprimirPrevisaoEntrega()}</td>
-										<td>{$item->imprimirDataEntrega()}</td>
-										<td>{$item->getStatus()}</td>
+										<td>{$emprestimo->getItem()}</td>
+										<td>{$emprestimo->imprimirDataEmprestimo()}</td>
+										<td>{$emprestimo->imprimirPrevisaoEntrega()}</td>
+										<td>{$emprestimo->imprimirDataEntrega()}</td>
+										<td>{$emprestimo->getNome()}</td>
+										<td>{$emprestimo->getContato()}</td>
+										<td>{$emprestimo->getStatus()}</td>
 									</tr>
 							";
 							$contador++;

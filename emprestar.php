@@ -1,5 +1,5 @@
 <?php
-	require_once "src/queries/item_query.php";
+	require_once "src/queries/emprestimo_query.php";
 	include("src/validacoes/verificar_login.php");
 ?>
 
@@ -17,8 +17,14 @@
 				<label for="emprestimo"><h6>Data de Empréstimo</h6></label>
 				<input type="date" class="form-control" name="data_emprestimo">
 				
-				<label for="previsao"><h6>Previsão de Entrega</h6></label>
+				<label for="previsao_entrega"><h6>Previsão de Entrega</h6></label>
 				<input type="date" class="form-control" name="previsao_entrega">
+				
+				<label for="nome"><h6>Nome da pesessoa que está emprestando</h6></label>
+				<input type="text" class="form-control" name="nome">
+				
+				<label for="contato"><h6>Telefone de Contato</h6></label>
+				<input type="text" class="form-control" name="contato">
 				<br><br>
 				<input type="submit" class="btn btn-primary" value="Cadastrar">
 			</form>

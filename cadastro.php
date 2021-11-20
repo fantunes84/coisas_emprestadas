@@ -10,9 +10,6 @@
                 <label for="nome"><h6>Nome Completo</h6></label>
                 <input type="text" class="form-control" name="nome" placeholder="Digite seu nome">
                 
-                <label for="contato"><h6>Contato</h6></label>
-                <input type="text" class="form-control" name="contato" placeholder="Digite o seu telefone">
-                
                 <label for="email"><h6>E-mail</h6></label>
                 <input type="mail" class="form-control" name="email" placeholder="Digite o seu e-mail">
                 

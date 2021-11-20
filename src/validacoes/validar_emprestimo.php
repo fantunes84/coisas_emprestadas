@@ -1,8 +1,10 @@
 <?php
 
 require_once "../config.php";
-require_once "../queries/item_query.php";
+require_once "../queries/emprestimo_query.php";
 
-cadastrar_item($conexao);
+session_start();
+
+cadastrar_emprestimo($conexao);
 
 header('Location: ../../index.php');

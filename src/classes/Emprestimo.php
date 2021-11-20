@@ -1,18 +1,23 @@
 <?php
 
-class Item
+class Emprestimo
 {
     private $item;
     private $data_emprestimo;
     private $previsao_entrega;
     private $data_entrega;
+    private $nome;
+    private $contato;
+    private $usuario_id;
 
-    public function __construct($item, $data_emprestimo, $previsao_entrega, $data_entrega)
+    public function __construct($item, $data_emprestimo, $previsao_entrega, $data_entrega, $nome, $contato, $usuario_id)
     {
         $this->item = $item;
         $this->data_emprestimo = $data_emprestimo;
         $this->previsao_entrega = $previsao_entrega;
         $this->data_entrega = $data_entrega;
+        $this->nome = $nome;
+        $this->contato = $contato;
     }
 
     public function getItem()
@@ -76,6 +81,36 @@ class Item
     public function setDataEntrega($data_entrega): void
     {
         $this->data_entrega = $data_entrega;
+    }
+
+    public function getNome()
+    {
+        return $this->nome;
+    }
+    
+    public function setNome($nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    public function getContato()
+    {
+        return $this->contato;
+    }
+    
+    public function setContato($contato): void
+    {
+        $this->contato = $contato;
+    }
+
+    public function getUsuarioId()
+    {
+        return $this->usuario_id;
+    }
+    
+    public function setUsuarioId($usuario_id): void
+    {
+        $this->usuario_id = $usuario_id;
     }
 
     public function getStatus()
