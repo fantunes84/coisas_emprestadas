@@ -23,6 +23,14 @@ function cadastrar_emprestimo($conexao)
 }
 
 
+function devolver($conexao, $id)
+{
+    $hoje = date("Y-m-d");
+    $query = "update emprestimo set data_entrega='{$hoje}' where id={$id}";
+    $conexao->query($query);
+}
+
+
 function listar_emprestimos($conexao)
 {
     $query = 'select * from emprestimo';
@@ -30,9 +38,18 @@ function listar_emprestimos($conexao)
     return $resultado->fetch_all(MYSQLI_ASSOC);
 }
     
+
 function listar_emprestimos_usuario($conexao, $usuario_id)
 {
     $query = "select * from emprestimo where usuario_id={$usuario_id}";
     $resultado = $conexao->query($query);
     return $resultado->fetch_all(MYSQLI_ASSOC);
+}
+
+
+function listar_emprestimo_id($conexao, $emprestimo_id)
+{
+    $query = "select * from emprestimo where id={$emprestimo_id}";
+    $resultado = $conexao->query($query);
+    return $resultado->fetch_assoc();
 }

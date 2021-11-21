@@ -32,7 +32,8 @@
                         foreach ($emprestimos as $i)
 						{
 							$emprestimo = new Emprestimo(
-															$i["item"], 
+															$i["id"],
+															$i["item"],
 															$i["data_emprestimo"], 
 															$i["previsao_entrega"],
 															$i["data_entrega"],
@@ -49,6 +50,7 @@
 										<td>{$emprestimo->getNome()}</td>
 										<td>{$emprestimo->getContato()}</td>
 										<td>{$emprestimo->getStatus()}</td>
+										<td>{$emprestimo->devolver($i['id'])}</td>
 									</tr>
 							";
 							$contador++;

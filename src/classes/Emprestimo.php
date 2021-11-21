@@ -3,6 +3,7 @@
 class Emprestimo
 {
     private $item;
+    private $id;
     private $data_emprestimo;
     private $previsao_entrega;
     private $data_entrega;
@@ -10,14 +11,25 @@ class Emprestimo
     private $contato;
     private $usuario_id;
 
-    public function __construct($item, $data_emprestimo, $previsao_entrega, $data_entrega, $nome, $contato, $usuario_id)
+    public function __construct($id, $item, $data_emprestimo, $previsao_entrega, $data_entrega, $nome, $contato, $usuario_id)
     {
+        $this->id = $id;
         $this->item = $item;
         $this->data_emprestimo = $data_emprestimo;
         $this->previsao_entrega = $previsao_entrega;
         $this->data_entrega = $data_entrega;
         $this->nome = $nome;
         $this->contato = $contato;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+    
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 
     public function getItem()
@@ -122,10 +134,17 @@ class Emprestimo
             $atrasado = strtotime($hoje) > strtotime($this->previsao_entrega);
 
             if ($atrasado) {
-                return "Emprestado (Atrasado)";
+                return "<b>Emprestado (Atrasado)</b>";
             }else{
                 return "Emprestado (No prazo)";
             }
+        }
+    }
+
+    public function devolver($id)
+    {
+        if (!$this->data_entrega){
+            return "<a href='src/validacoes/devolver.php?id={$this->id}'>Devolver</a>";
         }
     }
 }
