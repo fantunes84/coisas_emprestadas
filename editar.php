@@ -18,7 +18,7 @@
                         <input type="hidden" name="id" value="<?php echo $emprestimo['id']; ?>">
 
                         <label for="item">Item</label>
-                        <input class="form-control" type="text" name="item" value="<?php echo $emprestimo['item']; ?>" required>
+                        <input class="form-control" type="text" name="item" value="<?php echo $emprestimo['item']; ?>" required malengthx="100">
                         
                         <label for="data_emprestimo">Data de empréstimo</label>
                         <input class="form-control" type="date" name="data_emprestimo" value="<?php echo $emprestimo['data_emprestimo']; ?>" required>
@@ -30,10 +30,10 @@
                         <input class="form-control" type="date" name="data_entrega" value="<?php echo $emprestimo['data_entrega']; ?>">
                         
                         <label for="item">Nome da pessoa que emprestou</label>
-                        <input class="form-control" type="text" name="nome" value="<?php echo $emprestimo['nome']; ?>" required>
+                        <input class="form-control" type="text" name="nome" value="<?php echo $emprestimo['nome']; ?>" required maxlength="100">
                         
                         <label for="contato">Contato</label>
-                        <input class="form-control" type="text" name="contato" value="<?php echo $emprestimo['contato']; ?>" required>
+                        <input class="form-control" type="text" name="contato" value="<?php echo $emprestimo['contato']; ?>" required maxlength="20">
 
 				<br><br>
 				<input type="submit" class="btn btn-primary" value="Cadastrar">
