@@ -5,6 +5,10 @@ require_once "../queries/emprestimo_query.php";
 
 session_start();
 
-cadastrar_emprestimo($conexao);
+if (!$_POST['id']){
+    cadastrar_emprestimo($conexao);
+} else {
+    editar_emprestimo($conexao);
+}
 
 header('Location: ../../index.php');

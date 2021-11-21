@@ -50,7 +50,10 @@
 										<td>{$emprestimo->getNome()}</td>
 										<td>{$emprestimo->getContato()}</td>
 										<td>{$emprestimo->getStatus()}</td>
-										<td>{$emprestimo->devolver($i['id'])}</td>
+										<td>
+											{$emprestimo->devolver($i['id'])}
+											<a href=\"editar.php?id={$i['id']}\">Editar</a>
+										</td>
 									</tr>
 							";
 							$contador++;

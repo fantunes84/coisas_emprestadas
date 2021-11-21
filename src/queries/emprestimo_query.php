@@ -22,6 +22,24 @@ function cadastrar_emprestimo($conexao)
     $conexao->query($query);
 }
 
+function editar_emprestimo($conexao)
+{
+    if (!$_POST['data_entrega']) {
+        $data_entrega = 'null';
+    } else {
+        $data_entrega = "'{$_POST['data_entrega']}'";
+    }
+    $query = "update emprestimo set
+                    item='{$_POST['item']}',
+                    data_emprestimo='{$_POST['data_emprestimo']}',
+                    data_entrega={$data_entrega},
+                    previsao_entrega='{$_POST['previsao_entrega']}',
+                    nome='{$_POST['nome']}',
+                    contato='{$_POST['contato']}'
+              where id={$_POST['id']}";
+    $conexao->query($query);
+}
+
 
 function devolver($conexao, $id)
 {

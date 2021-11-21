@@ -9,13 +9,13 @@ CREATE TABLE emprestimos.usuario(
 
 CREATE TABLE emprestimos.emprestimo(
     id INT NOT NULL AUTO_INCREMENT,
-    item VARCHAR(100),
-    data_emprestimo DATE,
-    previsao_entrega DATE,
+    item VARCHAR(100) NOT NULL,
+    data_emprestimo DATE NOT NULL,
+    previsao_entrega DATE NOT NULL,
     data_entrega DATE,
-    nome VARCHAR(100),
-    contato VARCHAR(20),
-    usuario_id INT,
+    nome VARCHAR(100) NOT NULL,
+    contato VARCHAR(20) NOT NULL,
+    usuario_id INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (usuario_id) REFERENCES emprestimos.usuario(id)
 );
