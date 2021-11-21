@@ -11,7 +11,7 @@
                 <input type="text" class="form-control" name="nome" placeholder="Digite seu nome" required maxlength="80">
                 
                 <label for="email"><h6>E-mail</h6></label>
-                <input type="mail" class="form-control" name="email" placeholder="Digite o seu e-mail" required maxlength="60">
+                <input type="email" class="form-control" name="email" placeholder="Digite o seu e-mail" required maxlength="60">
                 
                 <label for="senha"><h6>Senha</h6></label>
                 <input type="password" class="form-control" name="senha" placeholder="Digite uma senha" required>

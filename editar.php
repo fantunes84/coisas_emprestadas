@@ -1,8 +1,8 @@
 <?php 
-	require_once "src/classes/Emprestimo.php";
-	require_once "src/config.php";
-	require_once "src/queries/emprestimo_query.php";
-	include("src/validacoes/verificar_login.php");
+    require_once "src/classes/Emprestimo.php";
+    require_once "src/config.php";
+    require_once "src/queries/emprestimo_query.php";
+    include("src/validacoes/verificar_login.php");
     $id = $_GET["id"];
     $emprestimo = listar_emprestimo_id($conexao, $id);
 ?>
