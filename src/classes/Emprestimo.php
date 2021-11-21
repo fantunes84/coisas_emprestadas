@@ -128,15 +128,15 @@ class Emprestimo
     public function getStatus()
     {  
         if ($this->data_entrega) {
-            return "Devolvido (disponível)";
+            return "Devolvido";
         }else{
             $hoje = date("Y-m-d");
             $atrasado = strtotime($hoje) > strtotime($this->previsao_entrega);
 
             if ($atrasado) {
-                return "<b>Emprestado (Atrasado)</b>";
+                return "<b class=\"btn-danger\">Atrasado</b>";
             }else{
-                return "Emprestado (No prazo)";
+                return "No prazo";
             }
         }
     }
