@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-red">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Empréstimos</a>
+                <a class="navbar-brand" href="/">Empréstimos</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -24,12 +24,44 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link"  href="emprestar.php">Emprestar</a>
-                            <a class="nav-link"  href="index.php">Listar empréstimos</a>
-                            <a class="nav-link"  href="editar_cadastro.php?id=<?php echo $_SESSION['usuario_id']; ?>">Editar Cadastro Pessoal</a>
-                            <a class="nav-link"  href="alterar_senha.php?id=<?php echo $_SESSION['usuario_id']; ?>">Alterar senha</a>
-                            <a class="nav-link"  href="src/validacoes/logout.php">Logout</a>
-                            
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"  href="index.php">Listar empréstimos</a>    
+                        </li>
+
+                        <li class="nav-item dropdown float-right">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Detalhes da conta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                <li class="nav-item">
+                                    <a class="dropdown-item"><?php echo $_SESSION['usuario_nome']; ?></a>
+                                </li>
+
+                                <li><hr class="dropdown-divider"></li>
+
+                                <li class="nav-item">
+                                    <a class="dropdown-item"  href="editar_cadastro.php?id=<?php echo $_SESSION['usuario_id']; ?>">Editar Cadastro</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="dropdown-item"  href="alterar_senha.php?id=<?php echo $_SESSION['usuario_id']; ?>">Alterar senha</a>
+                                </li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                
+                                <li class="nav-item">
+                                    <a class="dropdown-item"  href="src/validacoes/logout.php">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        
+
+                        
+
+                        
                     </ul>
                 </div>
             </div>
