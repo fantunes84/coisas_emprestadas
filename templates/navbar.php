@@ -32,15 +32,9 @@
 
                         <li class="nav-item dropdown float-right">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Detalhes da conta
+                                <?php echo explode(" ", $_SESSION['usuario_nome'])[0]; ?> 
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li class="nav-item">
-                                    <a class="dropdown-item"><?php echo $_SESSION['usuario_nome']; ?></a>
-                                </li>
-
-                                <li><hr class="dropdown-divider"></li>
-
                                 <li class="nav-item">
                                     <a class="dropdown-item"  href="editar_cadastro.php?id=<?php echo $_SESSION['usuario_id']; ?>">Editar Cadastro</a>
                                 </li>
@@ -56,12 +50,6 @@
                                 </li>
                             </ul>
                         </li>
-
-                        
-
-                        
-
-                        
                     </ul>
                 </div>
             </div>
