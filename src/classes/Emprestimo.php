@@ -134,7 +134,7 @@ class Emprestimo
             $atrasado = strtotime($hoje) > strtotime($this->previsao_entrega);
 
             if ($atrasado) {
-                return "<b class=\"btn-danger\">Atrasado</b>";
+                return "<div class=\"bg-red\">Atrasado</div>";
             }else{
                 return "No prazo";
             }
