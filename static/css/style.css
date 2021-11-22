@@ -14,7 +14,7 @@ label{
 
 footer{
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
 }
 
@@ -250,3 +250,26 @@ input{
 }
 
 /* #### </TELA DE LOGIN> #### */
+
+
+
+
+/* #### </BARRA DE ROLAGEM> #### */
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+::-webkit-scrollbar-track {
+background-color: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+background: #151515;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #101010;
+}
+
+/* #### </BARRA DE ROLAGEM> #### */
