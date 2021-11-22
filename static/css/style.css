@@ -1,3 +1,5 @@
+/* #############   <GERAL>   ############# */
+
 body{
     margin: 0;
     padding: 0;
@@ -20,8 +22,18 @@ footer{
     background-color: darkred;
 }
 
+@media only screen and (min-width: 991px) {
+    .right{
+        position: absolute;
+        right: 0px;
+    }
+}
 
-/* #############   BOX   ############# */
+/* #############   </GERAL>   ############# */
+
+
+
+/* #############   <BOX>   ############# */
 
 .box{
     margin: 25px 10px 25px 10px;
@@ -59,9 +71,14 @@ footer{
     font-size: 13px;
 }
 
-/* #############   BOTÕES   ############# */
+/* #############   </BOX>   ############# */
 
-/* #######   COMUNS   ####### */
+
+
+
+/* #############   <BOTÕES>   ############# */
+
+/* #######   <COMUNS>   ####### */
 
 .btn{
     font-family: Ubuntu;
@@ -82,7 +99,10 @@ footer{
     transition: all .5s linear;
 }
 
-/* #######   PRIMARY   ####### */
+/* #######   </COMUNS>   ####### */
+
+
+/* #######   <PRIMARY>   ####### */
 
 .btn-primary{
     border: 1px solid #2e0000;
@@ -95,7 +115,10 @@ footer{
     transition: all .5s linear;
 }
 
-/* #######   DANGER   ####### */
+/* #######   <PRIMARY/>   ####### */
+
+
+/* #######   <DANGER >  ####### */
 
 .btn-danger{
     border: 1px solid #5e0000;
@@ -107,8 +130,15 @@ footer{
     background-color: darkred;
     transition: all .5s linear;
 }
+/* #######   </DANGER>   ####### */
 
-/* #### TABELA #### */
+
+/* #############   </BOTÕES>   ############# */
+
+
+
+
+/* #### <TABELA> #### */
 
 .tabela {
     width: 100%;
@@ -155,3 +185,68 @@ a {
     color: #3c8dbc;
     text-decoration: none;
 }
+
+/* #### </TABELA> #### */
+
+
+
+
+/* #### <FORMULÁRIOS> #### */
+
+.form-control{
+    display: block;
+    width: auto;
+    width: 99%;
+    height: 30px;
+    margin: 10px 10px 10px 0;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    background-color: #303030;
+    border: 1px solid #404040;
+    border-radius: 3px;
+    color: #ccc;
+    font-family: Ubuntu;
+}
+
+/* #### </FORMULÁRIOS> #### */
+
+
+
+
+/* #### <TELA DE LOGIN> #### */
+
+.login{
+    position: relative;
+    width: 100%;
+    height: 890px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: block;
+    background-color: #191919;
+    transition: all .25s linear;
+}
+
+.logotipo{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.login-box{
+    width:600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #### </TELA DE LOGIN> #### */
