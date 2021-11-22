@@ -1,7 +1,7 @@
     <br><br><br>
-	<footer class="bg-dark fixed-bottom">
+	<footer class="bg-dark teste">
         <div class="text-center p-3" >
-            <?php echo date("Y"); ?> © Fernando Antunes
+            © <?php echo date("Y"); ?> - Fernando Antunes
         </div>
 	</footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
