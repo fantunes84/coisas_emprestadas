@@ -1,6 +1,7 @@
 /* #############   <GERAL>   ############# */
 
 body{
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background: #191919;
@@ -13,8 +14,7 @@ label{
 }
 
 footer{
-    bottom: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
 }
 
