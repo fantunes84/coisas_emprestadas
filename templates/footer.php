@@ -1,4 +1,5 @@
-	<footer class="bg-dark">
+    <br><br>
+    <footer class="bg-dark">
         <div class="text-center p-3" >
             © <?php echo date("Y"); ?> - Fernando Antunes
         </div>

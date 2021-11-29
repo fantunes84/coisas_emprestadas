@@ -14,7 +14,8 @@ label{
 }
 
 footer{
-    position: absolute;
+    bottom: 0;
+    position: fixed;
     width: 100%;
 }
 
